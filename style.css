@@ -1,0 +1,118 @@
+body {
+  background: #010;
+  filter: blur(0.7px);
+  overflow: hidden;
+  font-family: monospace;
+}
+
+.skype-call {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+}
+
+.preview {
+  position: relative;
+  width: 330px;
+  height: 230px;
+  background-color: #030403;
+  box-shadow: 0px 2px 29px 3px #0a090a;
+}
+
+.btn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: #F5A623;
+  font: 13px sans-serif;
+  font-weight: bold;
+  padding: 2px 4px;
+  margin: 4px 4px;
+  border: 0;
+  outline: 0px;
+  z-index: 10;
+}
+
+.circle {
+  display: inline-block;
+  vertical-align: middle;
+  width: 7px;
+  height: 7px;
+  margin: 0px 4px 2px 0px;
+  border-radius: 50%;
+  background-color: black;
+  -webkit-animation-name: blinker;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-name: blinker;
+  -moz-animation-duration: 2s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: infinite;
+  animation-name: blinker;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.video {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  animation: fade 1s linear;
+  -webkit-animation: fade 1s linear;
+  -moz-animation: fade 1s linear;
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fade {
+  99% {
+    background-image: url("https://media.giphy.com/media/7IzRozhvj33wY/giphy.gif");
+  }
+  100% {
+    background-image: url("http://chabot.tv/img/pianocat.gif");
+  }
+}
+@-webkit-keyframes blinker {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.18;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blinker {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.18;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.scanlines {
+  pointer-events: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to, transparent 25%) !important;
+  background-size: 1px 3px;
+}
+
+.editor-text {
+  color: #9F9 !important;
+  font-size: 1em;
+  text-shadow: 1px 0px 5px #0F0, -1px 0px 2px #0F0 !important;
+}
